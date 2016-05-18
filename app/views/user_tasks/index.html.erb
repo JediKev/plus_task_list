@@ -1,29 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing User Tasks</h1>
+<h1 class="text-center">Things To Do</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Due</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <!-- Add Task Area -->
+  <div class="col-xs-4">
+    <h3>New Task</h3>
+    <%= link_to fa_icon('plus', text: 'Add Task'), new_user_task_path, remote: true, class: 'btn btn-block btn-default', id: 'new-button' %>
+    <!-- Form to be populated by jQuery -->
+    <div id="task-form"></div>
+  </div>
+  <!-- All Tasks -->
+  <div class="col-xs-8">
+    <h3>All Tasks</h3>
+    <div id="tasks">
+      <%= render @user_tasks %>
+    </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @user_tasks.each do |user_task| %>
-      <tr>
-        <td><%= user_task.description %></td>
-        <td><%= user_task.due %></td>
-        <td><%= link_to 'Show', user_task %></td>
-        <td><%= link_to 'Edit', edit_user_task_path(user_task) %></td>
-        <td><%= link_to 'Destroy', user_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New User task', new_user_task_path %>

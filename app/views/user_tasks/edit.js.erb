@@ -1,0 +1,6 @@
+$('#new-button')
+	.hide();
+
+$('#task-form')
+	.html("<%= j (render 'form') %>")
+	.slideDown(250);

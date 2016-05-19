@@ -21,3 +21,11 @@
 #task-form {
 	display: none;
 }
+
+a.task {
+	color: #333333;
+	
+	&:hover {
+		text-decoration: line-through;
+	}
+}

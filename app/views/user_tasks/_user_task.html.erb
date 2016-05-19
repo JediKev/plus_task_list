@@ -1,4 +1,5 @@
 <div class="well">
+	<%# TODO: Why doesn't the jQuery run after edit? %>
 	<%= link_to fa_icon('square-o', text: user_task.description), user_task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'task' %>
 	<div class="pull-right">
 		<%= user_task.due.try(:stamp, 'Monday, July 7, 1995') %>

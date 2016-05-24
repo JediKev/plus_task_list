@@ -18,14 +18,14 @@
 //= require_tree .
 
 function hoverIn(event) {
-	$(event.target).addClass('text-muted');
+	$(event.target).addClass('text-success');
 	$(event.target).closest('a').children('i')
 		.removeClass('fa-square-o')
 		.addClass('fa-check-square-o');
 }
 
 function hoverOut(event) {
-	$(event.target).removeClass('text-muted');
+	$(event.target).removeClass('text-success');
 	$(event.target).closest('a').children('i')
 		.removeClass('fa-check-square-o')
 		.addClass('fa-square-o');
@@ -34,4 +34,10 @@ function hoverOut(event) {
 $(document).ready(function(){
 	$('.task').hover(hoverIn, hoverOut);
 });
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 2000);
+ })
 	

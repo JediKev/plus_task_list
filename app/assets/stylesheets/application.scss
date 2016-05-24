@@ -17,20 +17,129 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "bootstrap-datepicker3";
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400);
+
+html {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+}
+
+h3 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	color: #5CB85C;
+}
+
+.navbar-default {
+	background-color: #5CB85C;
+	color: #FFFFFF;
+	border: none;
+}
+
+.navbar-default .navbar-collapse {
+	border: none;
+}
+
+.navbar-default .navbar-brand {
+	color: #FFFFFF;
+
+	&:hover {
+		color: #EEEEEE;
+	}
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #FFFFFF;
+
+	&:hover {
+		color: #EEEEEE;
+	}
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #FFFFFF;
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFFFFF;
+}
 
 #task-form {
 	display: none;
 }
 
 a.task {
-	color: #333333;
+	color: #FFFFFF;
 	
 	&:hover {
 		text-decoration: line-through;
-		color: #707070;
+		color: #EEEEEE;
 	}
 }
 
-body {
-	margin-top: 5%;
+.btn {
+	font-weight: 200;
 }
+
+body {
+	margin-top: 70px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+}
+
+label {
+	color: #5CB85C;
+}
+
+#well {
+	background-color: #5CB85C;
+	border-radius: 6px;
+	padding: 2% 4% 2% 4%;
+	margin-bottom: 1%;
+	font-size: 1.1em;
+}
+
+.flash {
+	text-align: center;
+	margin-top: 4%;
+	padding: 1% 0 1% 0;
+	border-radius: 6px;
+	background-color: #5CB85C;
+	color: #FFFFFF;
+}
+
+.text-success {
+	color: #EEEEEE;
+}
+
+#btn-sucks {
+	background-color: transparent;
+	border: 1px solid #FFFFFF;
+
+	&:hover {
+		background-color: #FFFFFF;
+		color: #5CB85C;
+	}
+}
+
+.pull-right {
+	color: #FFFFFF;
+}
+
+.pull-left {
+	padding-top: 0.7%;
+}
+
+
+
+
+
+

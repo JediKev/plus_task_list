@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="text-center">Things To Do</h1>
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}", id: 'flash' %>
+<% end %>
+<!-- <p id="notice"><//%= notice %></p> -->
 
 <div class="row">
   <!-- Add Task Area -->
   <div class="col-xs-4">
-    <h3>New Task</h3>
-    <%= link_to fa_icon('plus', text: 'Add Task'), new_user_task_path, remote: true, class: 'btn btn-block btn-default', id: 'new-button' %>
+    <h3 class="text-center">New Task</h3>
+    <%= link_to fa_icon('plus', text: 'Add Task'), new_user_task_path, remote: true, class: 'btn btn-block btn-success', id: 'new-button' %>
     <!-- Form to be populated by jQuery -->
     <div id="task-form"></div>
   </div>
   <!-- All Tasks -->
   <div class="col-xs-8">
-    <h3>All Tasks</h3>
+    <h3 class="text-center">All Tasks</h3>
     <div id="tasks">
       <%= render @user_tasks %>
     </div>

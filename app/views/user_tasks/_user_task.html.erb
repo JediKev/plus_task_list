@@ -1,9 +1,10 @@
-<div class="well">
-	<%# TODO: Why doesn't the jQuery run after edit? %>
-	<%= link_to fa_icon('square-o', text: user_task.description), user_task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'task' %>
+<div class="container-fluid" id="well">
+	<div class="pull-left">
+		<%# TODO: Why doesn't the jQuery run after edit? %>
+		<%= link_to fa_icon('square-o', text: user_task.description), user_task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'task' %>
+	</div>
 	<div class="pull-right">
 		<%= user_task.due.try(:stamp, 'Monday, July 7, 1995') %>
-		<%= link_to fa_icon('pencil'), edit_user_task_path(user_task), remote: true, class: 'btn btn-sm btn-primary' %>
-		
+		<%= link_to fa_icon('pencil', text: 'Edit'), edit_user_task_path(user_task), remote: true, class: 'btn btn-sm btn-success', id: 'btn-sucks' %>
 	</div>
 </div>

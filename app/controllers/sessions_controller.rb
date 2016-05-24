@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+
+	def new
+	end
+
 	# Sign In
 	def create
 		auth = request.env['omniauth.auth']

@@ -27,7 +27,8 @@ html {
 }
 
 body {
-	background-image: url(leafy.png) no-repeat center center fixed;
+	background-image: image-url(leafy.png);
+	background-repeat: no-repeat;
 }
 
 h1 {

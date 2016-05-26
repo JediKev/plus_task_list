@@ -27,9 +27,8 @@ html {
 }
 
 body {
-	background-image: url(leafy.png);
-	background-attachment: fixed;
-  	background-position: 100% 100%;
+	background-image: url(leafy.png) no-repeat;
+  	background-position: center;
   	background-repeat: no-repeat;
 }
 

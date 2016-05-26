@@ -90,6 +90,7 @@ a.task {
 	color: rgba(196,196,196,1);
 	font-family: 'Indie Flower', cursive;
 	font-size: 1.4em;
+	word-break: break-all;
 	
 	&:hover {
 		text-decoration: line-through;

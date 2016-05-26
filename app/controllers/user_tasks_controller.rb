@@ -1,7 +1,9 @@
 class UserTasksController < ApplicationController
   before_action :set_user_task, only: [:show, :edit, :update, :destroy]
-  before_action :set_user_tasks, only: [:index, :create, :update, :destroy]
+  before_action :set_all_tasks, only: [:index, :create, :update, :destroy]
   before_action :authenticate_user!
+
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_task
 
   # GET /user_tasks
   # GET /user_tasks.json
@@ -37,6 +39,7 @@ class UserTasksController < ApplicationController
         format.html { render :new }
         format.js { render :new }
         format.json { render json: @user_task.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -51,7 +54,7 @@ class UserTasksController < ApplicationController
         format.json { render :show, status: :ok, location: @user_task }
       else
         format.html { render :edit }
-        format.js { render :edit }
+        format.js { render :new }
         format.json { render json: @user_task.errors, status: :unprocessable_entity }
       end
     end
@@ -69,11 +72,12 @@ class UserTasksController < ApplicationController
   end
 
   private
-    def set_user_tasks
-      @user_tasks = UserTask.order(:due)
+    # Use callbacks to share common setup or constraints between actions.
+
+    def authenticate_user!
+      redirect_to :signin unless current_user
     end
 
-    # Use callbacks to share common setup or constraints between actions.
     def set_user_task
       @user_task = UserTask.find(params[:id])
       if current_user.id == @user_task.user_id
@@ -94,6 +98,6 @@ class UserTasksController < ApplicationController
     end
 
     def set_all_tasks
-      @user_tasks = UserTask.where(user_id: current_user.id).order(:due)
+      @user_tasks = UserTask.where(user_id: current_user).order(:due)
     end
 end

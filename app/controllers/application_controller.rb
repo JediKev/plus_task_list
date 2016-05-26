@@ -11,8 +11,4 @@ class ApplicationController < ActionController::Base
 
   # We can declare a helper method to make it available to the controller and view
   helper_method :current_user
-
-  def authenticate_user!
-  	redirect_to :signin unless current_user
-  end
 end

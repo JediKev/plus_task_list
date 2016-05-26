@@ -18,21 +18,29 @@
 @import "font-awesome";
 @import "bootstrap-datepicker3";
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 html {
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Indie Flower', cursive;
+	// font-family: 'Work Sans', sans-serif;
 	font-weight: 200;
 }
 
-h3 {
-	font-family: 'Work Sans', sans-serif;
+body {
+	background-image: url(leafy.png);
+	background-size: cover;
+}
+
+h1 {
+	font-family: 'Indie Flower', cursive;
+	// font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
-	color: #5CB85C;
+	color: rgba(255,255,255,1);
 }
 
 .navbar-default {
-	background-color: #5CB85C;
-	color: #FFFFFF;
+	background-color: rgba(255,255,255,1);
+	color: rgba(196,196,196,1);
 	border: none;
 }
 
@@ -41,23 +49,25 @@ h3 {
 }
 
 .navbar-default .navbar-brand {
-	color: #FFFFFF;
+	color: rgba(196,196,196,1);
+	font-size: 1.9em;
 
 	&:hover {
-		color: #EEEEEE;
+		color: rgba(173,173,173,1);
 	}
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #FFFFFF;
+	color: rgba(196,196,196,1);
+	font-size: 1.1em;
 
 	&:hover {
-		color: #EEEEEE;
+		color: rgba(173,173,173,1);
 	}
 }
 
 .navbar-default .navbar-toggle {
-	border-color: #FFFFFF;
+	border-color: rgba(196,196,196,1);
 
 	&:hover {
 		background-color: transparent;
@@ -69,7 +79,7 @@ h3 {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #FFFFFF;
+	background-color: rgba(196,196,196,1);
 }
 
 #task-form {
@@ -77,11 +87,13 @@ h3 {
 }
 
 a.task {
-	color: #FFFFFF;
+	color: rgba(196,196,196,1);
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.4em;
 	
 	&:hover {
 		text-decoration: line-through;
-		color: #EEEEEE;
+		color: rgba(173,173,173,1);
 	}
 }
 
@@ -91,20 +103,22 @@ a.task {
 
 body {
 	margin-top: 70px;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Indie Flower', cursive;
+	// font-family: 'Work Sans', sans-serif;
 	font-weight: 200;
 }
 
 label {
-	color: #5CB85C;
+	color: rgba(255,255,255,1);
 }
 
 #well {
-	background-color: #5CB85C;
+	background-color: rgba(255,255,255,1);
 	border-radius: 6px;
 	padding: 2% 4% 2% 4%;
 	margin-bottom: 1%;
 	font-size: 1.1em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .flash {
@@ -121,23 +135,58 @@ label {
 }
 
 #btn-sucks {
+	margin-left: 20px;
 	background-color: transparent;
-	border: 1px solid #FFFFFF;
+	border: 1px solid rgba(196,196,196,1);
+	color: rgba(196,196,196,1);
+	text-shadow: none;
 
 	&:hover {
-		background-color: #FFFFFF;
-		color: #5CB85C;
+		background-color: rgba(196,196,196,0.4);
+		color: rgba(255,255,255,1);
 	}
 }
 
 .pull-right {
-	color: #FFFFFF;
+	color: rgba(196,196,196,1);
 }
 
 .pull-left {
-	padding-top: 0.7%;
+	padding-top: 0.6%;
 }
 
+#tasks {
+	padding: 0 10% 0 10%;
+}
+
+#add {
+	text-align: center;
+	padding: 0 30% 0 30%;
+}
+
+#new-button {
+	background-color: rgba(255,255,255,1);
+	color: rgba(196,196,196,1);
+	border: none;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+	&:hover {
+		background-color: rgba(245,245,245,1);
+		color: rgba(173,173,173,1);
+	}
+}
+
+#form-butt {
+	background-color: rgba(255,255,255,1);
+	color: rgba(196,196,196,1);
+	border: none;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+	&:hover {
+		background-color: rgba(245,245,245,1);
+		color: rgba(173,173,173,1);
+	}
+}
 
 
 

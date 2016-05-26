@@ -2,20 +2,25 @@
   <%= content_tag :div, value, class: "flash #{key}", id: 'flash' %>
 <% end %>
 <!-- <p id="notice"><//%= notice %></p> -->
-
-<div class="row">
-  <!-- Add Task Area -->
-  <div class="col-xs-4">
-    <h3 class="text-center">New Task</h3>
-    <%= link_to fa_icon('plus', text: 'Add Task'), new_user_task_path, remote: true, class: 'btn btn-block btn-success', id: 'new-button' %>
-    <!-- Form to be populated by jQuery -->
-    <div id="task-form"></div>
-  </div>
-  <!-- All Tasks -->
-  <div class="col-xs-8">
-    <h3 class="text-center">All Tasks</h3>
-    <div id="tasks">
-      <%= render @user_tasks %>
+<% if current_user %>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Add Task Area -->
+      <div class="col-xs-12" id="add">
+        <h1 class="text-center">New Task</h1>
+        <%= link_to '+ Add Task', new_user_task_path, remote: true, class: 'btn btn-success', id: 'new-button' %>
+        <!-- Form to be populated by jQuery -->
+        <div id="task-form"></div>
+      </div>
+      <!-- All Tasks -->
+      <div class="col-xs-12" id="tasks">
+        <h1 class="text-center">All Tasks</h1>
+        <div id="tasks">
+          <%= render @user_tasks %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+<% else %>
+  <% redirect_to signin_url %>
+<% end %>

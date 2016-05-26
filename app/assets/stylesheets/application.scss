@@ -27,7 +27,7 @@ html {
 }
 
 body {
-	background-image: image-url(leafy.png);
+	background-image: url(leafy.png);
 	background-size: cover;
 }
 
@@ -127,8 +127,8 @@ label {
 	margin-top: 4%;
 	padding: 1% 0 1% 0;
 	border-radius: 6px;
-	background-color: #5CB85C;
-	color: #FFFFFF;
+	background-color: rgba(255,255,255,1);
+	color: rgba(196,196,196,1);
 }
 
 .text-success {

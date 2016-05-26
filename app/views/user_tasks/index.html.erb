@@ -1,5 +1,7 @@
 <% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}", id: 'flash' %>
+  <div class="col-xs-8 col-xs-offset-2">
+    <%= content_tag :div, value, class: "flash #{key}", id: 'flash' %>
+  </div>
 <% end %>
 <!-- <p id="notice"><//%= notice %></p> -->
 <% if current_user %>
